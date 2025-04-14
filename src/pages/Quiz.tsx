@@ -25,14 +25,20 @@ const Quiz = () => {
             try {
                 const response = await fetch('/questions.json');
                 const json = await response.json();
-                const data = json.questions;
-                setQuestions(data);
-                setUserAnswers(data.map(() => [])); // Initialize
-                startTimer();
+                console.log('Fetched data:', json);  // Log the fetched data
+
+                // Ensure the structure is as expected
+                if (json.status === 'SUCCESS' && json.data && json.data.questions && Array.isArray(json.data.questions)) {
+                    setQuestions(json.data.questions);
+                    setUserAnswers(json.data.questions.map(() => [])); // Initialize answers
+                } else {
+                    console.error('Invalid data structure:', json);
+                }
             } catch (error) {
                 console.error('Failed to fetch questions:', error);
             }
         };
+
         fetchQuestions();
     }, []);
 
