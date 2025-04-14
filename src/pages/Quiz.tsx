@@ -23,7 +23,7 @@ const Quiz = () => {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await fetch('/questions.json');
+                const response = await fetch('http://localhost:5000/data');
                 const json = await response.json();
                 const data = json.questions;
                 setQuestions(data);
@@ -33,7 +33,6 @@ const Quiz = () => {
                 console.error('Failed to fetch questions:', error);
             }
         };
-
         fetchQuestions();
     }, []);
 
@@ -95,7 +94,6 @@ const Quiz = () => {
     };
 
     const handleReview = () => {
-        isReviewing === true;
         setIsReviewing(true);
     };
 
