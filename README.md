@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🧠 Sentence Construction Tool
 
 A fun and interactive web application to test and improve your sentence-building skills. Users are presented with incomplete sentences and must select the correct words from a set of options to complete them.
