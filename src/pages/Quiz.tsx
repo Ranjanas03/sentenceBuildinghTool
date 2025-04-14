@@ -113,23 +113,26 @@ const Quiz = () => {
             question: q.question,
             correctAnswer: q.correctAnswer,
             selectedAnswer: userAnswers[index] || [],
+            isCorrect: arraysEqual(userAnswers[index] || [], q.correctAnswer), // Add this logic
         }));
+        
 
         return (
             <FeedbackScreen
-                questions={feedbackData}
-                score={score}
-                totalQuestions={questions.length}
-                onRetry={() => {
-                    setUserAnswers(questions.map(() => []));
-                    setCurrentQuestionIndex(0);
-                    setShowFeedback(false);
-                    setIsReviewing(false);
-                    setScore(0);
-                    startTimer();
-                }}
-                onReview={handleReview}  // Added Review functionality
-            />
+            questions={feedbackData}
+            score={score}
+            totalQuestions={questions.length}
+            onRetry={() => {
+                setUserAnswers(questions.map(() => []));
+                setCurrentQuestionIndex(0);
+                setShowFeedback(false);
+                setIsReviewing(false);
+                setScore(0);
+                startTimer();
+            }}
+            onReview={handleReview}
+            isReviewing={isReviewing} 
+        />
         );
     }
 
