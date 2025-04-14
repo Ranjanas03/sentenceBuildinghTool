@@ -23,7 +23,7 @@ const Quiz = () => {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await fetch('http://localhost:5000/data');
+                const response = await fetch('/questions.json');
                 const json = await response.json();
                 const data = json.questions;
                 setQuestions(data);
