@@ -21,7 +21,7 @@ A fun and interactive web application to test and improve your sentence-building
 
 ## 📸 Preview
 
-<!-- [🔗 Live Demo on Netlify](https://your-app-name.netlify.app) -->
+https://sentencebuildingtool.netlify.app/
 
 ---
 
@@ -49,10 +49,9 @@ A fun and interactive web application to test and improve your sentence-building
 ## 📦 Installation & Setup
 
 ### 1. Clone the repo
+https://github.com/Ranjanas03/sentenceBuildinghTool/tree/main
 
-```bash
-# git clone https://github.com/yourusername/sentence-construction-tool.git
-cd sentence-construction-tool
-=======
-# sentenceBuildinghTool
->>>>>>> 1f08869b1b06ee01c67c4d083ee4031dcf19c00b
+### 2. npm install
+### 3. npm run dev
+
+
