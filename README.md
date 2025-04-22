@@ -2,10 +2,6 @@
 
 A fun and interactive web application to test and improve your sentence-building skills. Users are presented with incomplete sentences and must select the correct words from a set of options to complete them.
 
-> Developed as part of the CA MONK Frontend Internship Assignment.
-
----
-
 ## ✨ Features
 
 - 🧩 Fill-in-the-blank sentence questions
